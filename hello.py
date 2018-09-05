@@ -1,9 +1,10 @@
 from flask import Flask, render_template, session, redirect, url_for, flash
-from flask_script import Manager
+from flask_script import Manager, Shell
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
-from datetime import datetime
 from flask_wtf import Form
+from flask_migrate import Migrate, MigrateCommand
+from datetime import datetime
 from wtforms import StringField, SubmitField
 from wtforms.validators import Required
 from flask_sqlalchemy import SQLAlchemy
@@ -21,6 +22,7 @@ manager = Manager(app)
 bootstrap = Bootstrap(app)
 moment = Moment(app)
 db = SQLAlchemy(app)
+migrate = Migrate(app, db)
 
 # -----------------------------
 class Role(db.Model):
@@ -76,5 +78,12 @@ def index():
 def user(name):
     return render_template('user.html', name=name)
 
+# -----------------------------
+
+def make_shell_context():
+    return dict(app=app, db=db, User=User, Role=Role)
+
 if __name__ == '__main__':
+    manager.add_command('shell', Shell(make_context=make_shell_context))
+    manager.add_command('db', MigrateCommand)
     manager.run()
