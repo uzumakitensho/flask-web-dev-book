@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b6ebfac5-81d2-4247-bf45-8ff92b28de84" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello.py" beforeDir="false" afterPath="$PROJECT_DIR$/hello.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/data.sqlite" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,13 +23,15 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="13" />
-          <entry key="py" value="2" />
+          <entry key="ini" value="1" />
+          <entry key="py" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="13" />
-          <entry key="Python" value="2" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Python" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -61,8 +62,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hello.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="86" column="4" lean-forward="true" selection-start-line="86" selection-start-column="4" selection-end-line="87" selection-end-column="45" />
+            <state relative-caret-position="463">
+              <caret line="86" column="4" selection-start-line="86" selection-start-column="4" selection-end-line="87" selection-end-column="45" />
               <folding>
                 <element signature="e#0#75#0" expanded="true" />
                 <marker date="1536134091504" expanded="true" signature="1244:1519" ph="..." />
@@ -118,6 +119,11 @@
             <path>
               <item name="flask-web-dev-book" type="b2602c69:ProjectViewProjectNode" />
               <item name="flask-web-dev-book" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flask-web-dev-book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flask-web-dev-book" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flask-web-dev-book" type="b2602c69:ProjectViewProjectNode" />
@@ -233,10 +239,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/migrations/alembic.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-169" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migrations/env.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-675">
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hello.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="86" column="4" lean-forward="true" selection-start-line="86" selection-start-column="4" selection-end-line="87" selection-end-column="45" />
+        <state relative-caret-position="463">
+          <caret line="86" column="4" selection-start-line="86" selection-start-column="4" selection-end-line="87" selection-end-column="45" />
           <folding>
             <element signature="e#0#75#0" expanded="true" />
             <marker date="1536134091504" expanded="true" signature="1244:1519" ph="..." />
