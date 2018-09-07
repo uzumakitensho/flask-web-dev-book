@@ -15,6 +15,7 @@ class Config:
 
 
 class DevelopmentConfig(Config):
+    ENV = 'development'
     DEBUG = True
     MAIL_SERVER = 'smtp.mailtrap.io'
     MAIL_PORT = 2525
