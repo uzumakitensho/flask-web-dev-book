@@ -7,7 +7,7 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     FLASKY_MAIL_SUBJECT_PREFIX = '[Flasky]'
     FLASKY_MAIL_SENDER = 'Flasky Admin <flasky@example.com>'
-    FLASKY_ADMIN = os.environ.get('FLASKY_ADMIN')
+    FLASKY_ADMIN = os.environ.get('FLASKY_ADMIN') or 'afridianhafid@gmail.com'
 
     @staticmethod
     def init_app(app):
@@ -20,8 +20,8 @@ class DevelopmentConfig(Config):
     MAIL_SERVER = 'smtp.mailtrap.io'
     MAIL_PORT = 2525
     MAIL_USE_TLS = True
-    MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
-    MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
+    MAIL_USERNAME = os.environ.get('MAIL_USERNAME') or '45dd27c4db030a'
+    MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD') or '5b3e1df84901e6'
     SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') or 'sqlite:///' + os.path.join(basedir, 'data-dev.sqlite')
 
 class TestingConfig(Config):
