@@ -5,13 +5,6 @@
 {% block navbar%}{% endblock %}
 
 {% block page_content %}
-<h1>Login</h1>
+<h1>Register</h1>
 {{ wtf.quick_form(form) }}
-
-<p>
-    New user?
-    <a href="{{ url_for('auth.register') }}">
-        Click here to register
-    </a>
-</p>
 {% endblock %}
