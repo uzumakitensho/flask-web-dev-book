@@ -73,10 +73,12 @@ def change_password():
     form = UpdatePasswordForm()
     if form.validate_on_submit():
         user = current_user
-        if user is not None and user.verify_password(form.oldpassword.data):
+        if user is not None and current_user.confirmed and user.verify_password(form.oldpassword.data):
             user.password = form.newpassword.data
             db.session.add(user)
             db.session.commit()
-        flash('Your password has been changed')
+            flash('Your password has been changed')
+        else:
+            flash('Your password failed to change')
         return redirect(url_for('auth.change_password'))
     return render_template('auth/change_password.html', form=form)
